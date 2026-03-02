@@ -52,11 +52,6 @@ url = "/svetielko/"
 weight = 4
 
 [[main]]
-parent = "Svetielko"
-name = "Stanovy OZ Svetielko"
-url = "/svetielko/stanovy-oz-svetielko/"
-
-[[main]]
 name = "Kontakt"
 url = "/kontakt/"
 weight = 5
