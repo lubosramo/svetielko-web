@@ -12,6 +12,13 @@
         "text": "#444444",
         "text_dark": "#040404",
         "text_light": "#717171"
+      },
+      "link_color": {
+        "default": "#2563eb",
+        "hover": "#1d4ed8",
+        "visited": "#553c9a",
+        "focus": "#2563eb",
+        "active": "#1e40af"
       }
     },
     "darkmode": {
@@ -26,6 +33,13 @@
         "text": "#B4AFB6",
         "text_dark": "#fff",
         "text_light": "#B4AFB6"
+      },
+      "link_color": {
+        "default": "#60a5fa",
+        "hover": "#93c5fd",
+        "visited": "#a78bfa",
+        "focus": "#60a5fa",
+        "active": "#3b82f6"
       }
     }
   },

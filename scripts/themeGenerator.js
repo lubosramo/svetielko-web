@@ -29,14 +29,10 @@ function determinePaths() {
         throw new Error("Could not extract theme name from hugo.toml");
       }
 
-      const themeName = themeNameMatch[1];
       return {
         hugoTomlPath: rootHugoToml,
         themePath: path.join(__dirname, "../data/theme.json"),
-        outputPath: path.join(
-          __dirname,
-          `../themes/${themeName}/assets/css/generated-theme.css`,
-        ),
+        outputPath: path.join(__dirname, "../assets/css/generated-theme.css"),
         isThemeSetup: false,
       };
     } catch (error) {
@@ -116,6 +112,11 @@ function generateThemeCSS() {
       addColorsToCss(cssLines, themeConfig.colors.default.text_color);
     }
 
+    // Add default link colors
+    if (themeConfig.colors.default?.link_color) {
+      addColorsToCss(cssLines, themeConfig.colors.default.link_color, "link");
+    }
+
     // Add darkmode colors (if available)
     if (themeConfig.colors.darkmode) {
       cssLines.push("", "  /* === Darkmode Colors === */");
@@ -133,6 +134,14 @@ function generateThemeCSS() {
           cssLines,
           themeConfig.colors.darkmode.text_color,
           "darkmode",
+        );
+      }
+
+      if (themeConfig.colors.darkmode.link_color) {
+        addColorsToCss(
+          cssLines,
+          themeConfig.colors.darkmode.link_color,
+          "darkmode-link",
         );
       }
     }

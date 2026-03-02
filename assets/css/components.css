@@ -34,7 +34,7 @@
   @apply prose-h2:text-h2-sm md:prose-h2:text-h2;
   @apply prose-h3:text-h3-sm md:prose-h3:text-h3;
   @apply prose-p:text-base prose-p:text-text dark:prose-p:text-darkmode-text;
-  @apply prose-a:text-text prose-a:[&.btn]:no-underline  dark:prose-a:text-darkmode-text;
+  @apply prose-a:text-link-default prose-a:underline prose-a:[&.btn]:no-underline prose-a:hover:text-link-hover prose-a:visited:text-link-visited prose-a:focus-visible:text-link-focus prose-a:focus-visible:outline prose-a:focus-visible:outline-2 prose-a:focus-visible:outline-offset-2 prose-a:active:text-link-active dark:prose-a:text-darkmode-link-default dark:prose-a:hover:text-darkmode-link-hover dark:prose-a:visited:text-darkmode-link-visited dark:prose-a:focus-visible:text-darkmode-link-focus dark:prose-a:active:text-darkmode-link-active;
   @apply prose-img:max-w-full prose-img:rounded;
   @apply prose-strong:text-text-dark dark:prose-strong:text-darkmode-text;
   @apply prose-hr:border-border dark:prose-hr:border-darkmode-border;
