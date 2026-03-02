@@ -2,4 +2,6 @@
 title: "Stanovy OZ Svetielko"
 ---
 
-Odkaz na PDF stanov – bude doplnený pri migrácii.
+Stanovy Občianskeho združenia Svetielko sú k dispozícii v súbore PDF na stiahnutie.
+
+[Stanovy OZ Svetielko (PDF, 3,8 MB)](/docs/OZ-Svetielko-stanovy.pdf)
