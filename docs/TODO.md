@@ -11,9 +11,8 @@ Zoznam úloh a nápadov na dokončenie projektu.
 - Pridávaj dátum alebo krátky popis podľa potreby
 
 --
-- [ ] _príklad: dokončiť stránku X [vysoká]_
-- [x] _vyriesit menu - ci bude megamenu, teda podstranky na hover, alebo nie (ako Svetielko), bolo by asi fajn mat megamenu [vysoká]_
-- [ ] ako funguje oznacovanie dokonceneho? [x] mi nefunguje
+[ ] ako funguje oznacovanie dokonceneho? [x] mi v Preview nic neukaze, asi je to tak, zial; iba ak je na zaciatku riadku
+[ ] _vyriesit menu - ci bude megamenu, teda podstranky na hover, alebo nie (ako Svetielko), bolo by asi fajn mat megamenu [vysoká]_
 
 ---
 
@@ -25,4 +24,4 @@ Zoznam úloh a nápadov na dokončenie projektu.
 ---
 
 _Posledná aktualizácia: 2025-03-02_
-cia: 2025-03-02_
+
