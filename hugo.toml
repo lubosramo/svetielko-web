@@ -8,7 +8,7 @@ relativeURLs = false
 uglyURLs = false
 
 # Title of your website (required).
-title = "Hugoplate"
+title = "Svetielko"
 # Your theme name
 theme = "hugoplate"
 # Default time zone for time stamps; use any valid tz database name: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
@@ -19,8 +19,8 @@ summaryLength = 10 # see https://gohugo.io/content-management/summaries/#automat
 disableLanguages = [
 ] # example: ["fr"] for disable french language. see https://gohugo.io/content-management/multilingual/
 hasCJKLanguage = false #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Korean Languages in the content. see: https://gohugo.io/getting-started/configuration/#hascjklanguage
-# default language
-defaultContentLanguage = 'en'
+# default language (Slovak only)
+defaultContentLanguage = 'sk'
 # defaultContentLanguageInSubdir need to be true if you want to use the language code as a subdirectory and language specific 404 page
 defaultContentLanguageInSubdir = false
 

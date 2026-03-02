@@ -1,0 +1,79 @@
+############# Slovenská navigácia (Svetielko) ##############
+
+# hlavné menu
+[[main]]
+name = "Úvod"
+url = "/"
+weight = 1
+
+[[main]]
+name = "Hudba"
+url = "/hudba/"
+weight = 2
+
+[[main]]
+parent = "Hudba"
+name = "Vianoce na celom svete"
+url = "/hudba/vianoce-na-celom-svete/"
+
+[[main]]
+parent = "Hudba"
+name = "Ferdo Mravec Všeumelec"
+url = "/hudba/ferdo-mravec-vseumelec/"
+
+[[main]]
+name = "Aktivity"
+url = "/aktivity/"
+weight = 3
+
+[[main]]
+parent = "Aktivity"
+name = "Ukončené aktivity"
+url = "/aktivity/ukoncene-aktivity/"
+
+[[main]]
+parent = "Aktivity"
+name = "Hudobné kurzy v Bratislave"
+url = "/aktivity/hudobne-kurzy-v-bratislave/"
+
+[[main]]
+parent = "Aktivity"
+name = "Pôvodný detský muzikál Ferdo Mravec Všeumelec"
+url = "/aktivity/ferdo-mravec-vseumelec/"
+
+[[main]]
+parent = "Aktivity"
+name = "Muzikál Vianoce na celom svete"
+url = "/aktivity/vianoce-na-celom-svete/"
+
+[[main]]
+name = "Svetielko"
+url = "/svetielko/"
+weight = 4
+
+[[main]]
+parent = "Svetielko"
+name = "Stanovy OZ Svetielko"
+url = "/svetielko/stanovy-oz-svetielko/"
+
+[[main]]
+name = "Kontakt"
+url = "/kontakt/"
+weight = 5
+
+
+# footer menu
+[[footer]]
+name = "Úvod"
+url = "/"
+weight = 1
+
+[[footer]]
+name = "Svetielko"
+url = "/svetielko/"
+weight = 2
+
+[[footer]]
+name = "Kontakt"
+url = "/kontakt/"
+weight = 3

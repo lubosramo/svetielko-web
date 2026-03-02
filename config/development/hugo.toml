@@ -1,0 +1,4 @@
+# Pri lokálnom serveri sa použije tento baseURL, aby sa assety (CSS, logo, obrázky)
+# a odkazy načítavali z localhost a stránka sa správne zobrazila.
+# Spustenie: hugo server --environment development
+baseURL = "http://localhost:1313/"

@@ -1,6 +1,6 @@
-################ English language ##################
-[en]
-languageName = "En"
-languageCode = "en-us"
-contentDir = "content/english"
+################ Slovak language (default) ##################
+[sk]
+languageName = "Slovenčina"
+languageCode = "sk"
+contentDir = "content/sk"
 weight = 1
