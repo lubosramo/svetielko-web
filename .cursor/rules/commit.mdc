@@ -1,0 +1,19 @@
+---
+description: Jazyk commit správ – vždy slovenčina
+alwaysApply: true
+---
+
+# Commit messages v slovenčine
+
+Pri generovaní commit správ (Git) pre tento repozítár vždy píš **po slovensky**.
+
+- Predmet (subject) aj telo (body) commitu majú byť v slovenčine.
+- Používaj slovenskú gramatiku a pravopis.
+
+## Workflow keď používateľ povie „commit“ alebo žiada o commit message
+
+Vstavané tlačidlo „Generate Commit Message“ (✨) v Cursore **nepoužíva** tieto pravidlá. Ak používateľ v chate napíše napr. „commit“, „vygeneruj commit message“ alebo „napíš commit message pre staged zmeny“:
+
+1. Zisti staged zmeny: `git status` a `git diff --cached`.
+2. Na základe nich vygeneruj commit message **v slovenčine** (predmet + voliteľne telo).
+3. Môžeš predložiť celý príkaz `git commit -m "..."` na skopírovanie.
