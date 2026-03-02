@@ -26,8 +26,12 @@
   @apply mr-0;
 }
 
-.nav-dropdown > svg {
+.nav-dropdown-toggle svg {
   @apply pointer-events-none;
+}
+
+.nav-dropdown-toggle {
+  @apply inline-flex min-h-[44px] min-w-[44px] items-center justify-center lg:min-h-0 lg:min-w-0;
 }
 
 .nav-dropdown-list {
