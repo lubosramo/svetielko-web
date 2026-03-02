@@ -1,0 +1,42 @@
+{{ define "main" }}
+  {{ partial "page-header" . }}
+
+  <section class="section">
+    <div class="container">
+      <div class="row justify-center">
+        <div class="lg:col-10">
+          {{ with .Content }}
+            <div class="content mb-10">
+              {{ . }}
+            </div>
+          {{ end }}
+
+          <ul class="space-y-6 list-none pl-0">
+            {{ range .RegularPages }}
+              <li class="border-border dark:border-darkmode-border border-b pb-6 last:border-0 last:pb-0">
+                <a
+                  href="{{ .Permalink }}"
+                  class="text-text-dark dark:text-darkmode-text-dark hover:opacity-80 block">
+                  <span class="text-xl font-medium">
+                    {{ .Param "list_title" | default .Title }}
+                  </span>
+                </a>
+                {{ with .Param "description" | default .Description }}
+                  <p class="mt-2 text-text-light dark:text-darkmode-text-light text-base">
+                    {{ . | markdownify }}
+                  </p>
+                {{ else }}
+                  {{ with .Summary }}
+                    <p class="mt-2 text-text-light dark:text-darkmode-text-light text-base">
+                      {{ . | plainify }}
+                    </p>
+                  {{ end }}
+                {{ end }}
+              </li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}

@@ -30,6 +30,10 @@ Mapovanie stránok na Hugo content súbory a výsledné URL. Statické súbory (
 
 Poznámka: „Detský muzikál Anjeli“ a „Detské koncerty“ sú len text na stránke Aktivity, nemajú vlastnú podstránku.
 
+**Zoznam na stránke Aktivity:** Podstránky sa na `/aktivity/` zobrazujú automaticky. V front matter každej podstránky môžete nastaviť:
+- **list_title** – názov odkazu v zozname (ak chcete iný ako `title`)
+- **description** – krátka anotácia pod odkazom (ak chýba, použije sa výňatok z úvodu stránky)
+
 ## Podstránky – Svetielko
 
 | Názov | Content súbor | URL |
