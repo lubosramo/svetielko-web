@@ -5,6 +5,11 @@
   name="viewport"
   content="width=device-width, initial-scale=1, maximum-scale=5" />
 
+{{/* Zakázanie indexovania vývojovej verzie na Cloudflare Pages (*.pages.dev) */}}
+{{ if in site.BaseURL "pages.dev" }}
+<meta name="robots" content="noindex, nofollow" />
+{{ end }}
+
 <!-- theme meta -->
 <meta name="theme-name" content="hugoplate" />
 
