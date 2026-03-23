@@ -11,27 +11,30 @@
         <ul class="space-y-6 list-none pl-0">
           {{ range .RegularPages }}
             <li>
-              <div
-                class="rounded-lg border border-border bg-light p-6 shadow-md dark:border-darkmode-border dark:bg-darkmode-light dark:shadow-lg/30">
-                <a
-                  href="{{ .Permalink }}"
-                  class="text-link-default dark:text-darkmode-link-default underline hover:text-link-hover dark:hover:text-darkmode-link-hover visited:text-link-visited dark:visited:text-darkmode-link-visited focus-visible:text-link-focus dark:focus-visible:text-darkmode-link-focus active:text-link-active dark:active:text-darkmode-link-active block">
-                  <span class="text-xl font-medium">
-                    {{ .Param "list_title" | default .Title }}
-                  </span>
-                </a>
+              <a
+                href="{{ .Permalink }}"
+                class="group block rounded-lg border border-border bg-light p-6 no-underline shadow-md transition-shadow duration-200 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 dark:border-darkmode-border dark:bg-darkmode-light dark:shadow-lg/30 dark:hover:shadow-xl/30 dark:focus-visible:ring-darkmode-primary/50">
+                <span
+                  class="text-xl font-bold text-link-default underline decoration-2 underline-offset-2 hover:text-link-hover visited:text-link-visited group-hover:text-link-hover dark:text-darkmode-link-default dark:hover:text-darkmode-link-hover dark:visited:text-darkmode-link-visited dark:group-hover:text-darkmode-link-hover">
+                  {{ .Param "list_title" | default .Title }}
+                </span>
                 {{ with .Param "description" | default .Description }}
-                  <p class="mt-2 text-text-light dark:text-darkmode-text-light text-base">
+                  <div
+                    class="mt-2 text-base text-text-light dark:text-darkmode-text-light [&_a]:text-link-default [&_a]:underline dark:[&_a]:text-darkmode-link-default [&_p+p]:mt-2">
                     {{ . | markdownify }}
-                  </p>
+                  </div>
                 {{ else }}
                   {{ with .Summary }}
-                    <p class="mt-2 text-text-light dark:text-darkmode-text-light text-base">
+                    <p class="mt-2 text-base text-text-light dark:text-darkmode-text-light">
                       {{ . | plainify }}
                     </p>
                   {{ end }}
                 {{ end }}
-              </div>
+                <span
+                  class="mt-3 block text-sm font-medium text-link-default group-hover:text-link-hover dark:text-darkmode-link-default dark:group-hover:text-darkmode-link-hover">
+                  {{ i18n "list_card_cta" }}
+                </span>
+              </a>
             </li>
           {{ end }}
         </ul>
