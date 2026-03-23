@@ -1,0 +1,41 @@
+<section class="section">
+  <div class="container">
+    <div class="row justify-center">
+      <div class="lg:col-10">
+        {{ with .Content }}
+          <div class="content mb-10">
+            {{ . }}
+          </div>
+        {{ end }}
+
+        <ul class="space-y-6 list-none pl-0">
+          {{ range .RegularPages }}
+            <li>
+              <div
+                class="rounded-lg border border-border bg-light p-6 shadow-md dark:border-darkmode-border dark:bg-darkmode-light dark:shadow-lg/30">
+                <a
+                  href="{{ .Permalink }}"
+                  class="text-link-default dark:text-darkmode-link-default underline hover:text-link-hover dark:hover:text-darkmode-link-hover visited:text-link-visited dark:visited:text-darkmode-link-visited focus-visible:text-link-focus dark:focus-visible:text-darkmode-link-focus active:text-link-active dark:active:text-darkmode-link-active block">
+                  <span class="text-xl font-medium">
+                    {{ .Param "list_title" | default .Title }}
+                  </span>
+                </a>
+                {{ with .Param "description" | default .Description }}
+                  <p class="mt-2 text-text-light dark:text-darkmode-text-light text-base">
+                    {{ . | markdownify }}
+                  </p>
+                {{ else }}
+                  {{ with .Summary }}
+                    <p class="mt-2 text-text-light dark:text-darkmode-text-light text-base">
+                      {{ . | plainify }}
+                    </p>
+                  {{ end }}
+                {{ end }}
+              </div>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

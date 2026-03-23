@@ -1,16 +1,8 @@
 <footer class="bg-light dark:bg-darkmode-light">
   <div class="container">
-    <div class="row items-center py-10">
-      <div class="lg:col-3 mb-8 text-center lg:mb-0 lg:text-left">
-        <!-- navbar brand/logo -->
-        <a
-          class="navbar-brand inline-block"
-          href="{{ site.Home.RelPermalink }}">
-          {{/* https://github.com/gethugothemes/hugo-modules/tree/master/images */}}
-          {{ partial "logo" }}
-        </a>
-      </div>
-      <div class="lg:col-6 mb-8 text-center lg:mb-0">
+    <div
+      class="grid grid-cols-1 gap-8 py-4 lg:grid-cols-[1fr_auto] lg:items-center lg:gap-6">
+      <nav class="text-center" aria-label="Footer">
         <ul>
           {{ range site.Menus.footer }}
             <li class="m-3 inline-block">
@@ -30,8 +22,8 @@
             </li>
           {{ end }}
         </ul>
-      </div>
-      <div class="lg:col-3 mb-8 text-center lg:mb-0 lg:mt-0 lg:text-right">
+      </nav>
+      <div class="flex justify-center lg:justify-end">
         <ul class="social-icons">
           {{ range site.Data.social.main }}
             <li>
@@ -48,7 +40,7 @@
       </div>
     </div>
   </div>
-  <div class="border-border dark:border-darkmode-border border-t py-7">
+  <div class="border-border dark:border-darkmode-border border-t py-4">
     <div
       class="text-text-light dark:text-darkmode-text-light container text-center">
       <p>

@@ -1,6 +1,6 @@
 # URL a slugy – Svetielko (1:1 z Buxus)
 
-Mapovanie stránok na Hugo content súbory a výsledné URL. Statické súbory (.html, .mp3, .pdf) ostávajú v `static/`, odkazy na ne sa nemenia.
+Mapovanie stránok na Hugo content súbory a výsledné URL. Kde ukladať súbory podľa typu (obrázky vs. statika) – pozri sekciu **Obrázky a assety** nižšie.
 
 ## Hlavné menu (vrchná lišta)
 
@@ -73,6 +73,13 @@ Poznámka: „Detský muzikál Anjeli“ a „Detské koncerty“ sú len text n
 - Haleluja: `haleluja96.htm`, `haleluja97.htm`, `haleluja98.htm`, `haleluja99.htm`, `haleluja.htm` → v `static/` alebo na pôvodnej ceste
 - MP3 ukážky: napr. `buxus/docs/ukazky/...` → skopírovať do `static/` a zachovať cesty v obsahu
 - PDF stanovy: napr. `buxus/docs/OZ-Svetielko-stanovy.pdf` → `static/docs/` alebo ekvivalent
+
+## Obrázky a assety
+
+- **Logo, favicon, OG obrázok** (cesty v `config/_default/params.toml`, napr. `logo`, `logo_darkmode`, `favicon`, `image` pre OG) – téma Hugoplate používa modul [hugo-modules/images](https://github.com/gethugothemes/hugo-modules/tree/master/images). Zdrojové súbory patria do **`assets/images/`** v koreni projektu (relatívne cesty v konfigurácii zostávajú vo formáte `images/názov.png`, bez prefixu `assets/`). Súbory v projekte pri rovnakej ceste ako v téme **prepíšu** predvolené z Hugoplate. Voliteľné generovanie WebP pre logo riadi `logo_webp` v `params.toml`.
+- **Obrázky v obsahu stránok** – odporúčaný spôsob je cez partial `image` a resources z `assets/` (alebo page bundle: obrázok v priečinku vedľa `index.md`), aby Hugo vedel spracovať veľkosti a formáty.
+- **Súbory „ako sú“** (PDF, staré `.htm`, MP3, dokumenty bez pipeline) – **`static/`**; po builde sú dostupné pod rovnakou cestou od koreňa webu (napr. `static/docs/súbor.pdf` → `/docs/súbor.pdf`).
+- **Priečinok `images/` mimo `assets/` a `static/`** – Hugo ho štandardne do výstupnej stránky **nezaradí**; pre publikované URL používaj `assets/images/` alebo `static/...` podľa typu súboru vyššie.
 
 ---
 

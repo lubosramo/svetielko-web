@@ -3,6 +3,8 @@
 @plugin "@tailwindcss/typography";
 @plugin 'tailwind-bootstrap-grid';
 @source "hugo_stats.json";
+/* Šablóny mimo stats – aby atomic triedy (napr. py-6) v HTML existovali aj keď ešte nie sú v hugo_stats.json */
+@source "../../layouts/**/*.html";
 @custom-variant dark (&:where(.dark, .dark *));
 
 /* Auto-generated theme from "data/theme.json"*/
